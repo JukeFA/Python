@@ -247,7 +247,6 @@ def draw_window(surface, grid):
     surface.blit(label, (top_left_x + play_width/2 - (lable.get_width()/2)), 30)
 
     draw_grid(surface, grid)
-    pygame.display.update()
 
 
 def main(win):
