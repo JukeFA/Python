@@ -251,7 +251,7 @@ def draw_window(surface, grid):
 
 def main(win):
     
-    locked_positons = {}
+    locked_positions = {}
     grid = create_grid(locked_positions)
 
     change_piece = False
@@ -263,7 +263,7 @@ def main(win):
 
     while run:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT():
+            if event.type == pygame.QUIT:
                 run = False
             
             if event.type == pygame.KEYDOWN:

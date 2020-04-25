@@ -191,7 +191,7 @@ shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 16
 
 
 class Piece(object):
-    def _init_(self, x, y, shape):
+    def __init__(self, x, y, shape):
         self.x = x
         self.y = y
         self.shape = shape
@@ -242,9 +242,9 @@ def draw_window(surface, grid):
 
     pygame.font.init()
     font = pygame.font.SysFont('comicsans', 60)
-    lable = font.render('Tetris', 1, (255, 255, 255))
+    label = font.render('Tetris', 1, (255, 255, 255))
 
-    surface.blit(label, (top_left_x + play_width/2 - (lable.get_width()/2)), 30)
+    surface.blit(label, (top_left_x + play_width/2 - (label.get_width()/2), 30))
 
     draw_grid(surface, grid)
 
@@ -258,7 +258,7 @@ def main(win):
     run = True
     current_piece = get_shape()
     next_piece = get_shape()
-    clock = pygame.time.clock
+    clock = pygame.time.Clock
     fall_time = 0
 
     while run:
@@ -297,4 +297,4 @@ def main_menu(win):
 win = pygame.display.set_mode((s_width, s_height))
 pygame.display.set_caption('Tetris')
 
-main_menu()  # start game
+main_menu(win)  # start game
