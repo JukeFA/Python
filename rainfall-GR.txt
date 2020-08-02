@@ -1,0 +1,13 @@
+Average monthly rainfall (inches) for Grand Rapids
+Jan 2.03
+Feb 1.54
+Mar 2.59
+Apr 3.48
+May 3.35
+Jun 3.67
+Jul 3.56
+Aug 3.78
+Sep 4.28
+Oct 2.80
+Nov 3.35
+Dec 2.70

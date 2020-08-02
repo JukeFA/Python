@@ -1,30 +1,27 @@
-# my_phonebook = {'Roger':3886, 'Scott':2088}
-# my_phonebook['Christian'] = 3646
-# my_phonebook['Jared'] = 4333
+handle = open("GettysburgAddress.txt")
+lame = open("GettysburgAddress.txt")
 
-# print (my_phonebook)
+leng = len(handle.read())
 
-# print (my_phonebook['Christian'])
+all_freq = {} 
 
-# print (my_phonebook['Paul'])
+for i in (lame.read()): 
+	if i in all_freq: 
+		all_freq[i] += 1
+	else: 
+		all_freq[i] = 1
 
-ingredient_list = []
+# printing result 
+# print ("Count of all characters in GeeksforGeeks is :\n" + str(all_freq)) 
 
-def recipe():
-    again = 'y'
+for letter in sorted(all_freq):
+    print(letter, ':', all_freq[letter], ':', "{:.2f}".format((all_freq[letter] / leng) * 100), '%')
 
 
-    while again =='y':
-        ingredient = input('Enter ingredient: ')
-        amount = input('Enter amount needed: ')
 
-        ingredient_list[ingredient] = amount
-        print('Do you want to add another ingredient?')
-        again = input('y = yes, anything else = no: ')
-        print()
+voule = ["A", "E", "I", "O", "U"]
+for j in voule:
+    print("{:.2f}".format((all_freq[j] / leng) * 100))
 
-    print('Here are the ingredients you entered.')
-    for name in ingredient_list:
-        print(ingredient)
 
-recipe()
+# print (voules & all_freq)
